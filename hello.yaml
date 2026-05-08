@@ -71,26 +71,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: hello.k8s-dev.hpc.uidaho.edu
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: hello-service
-                port:
-                  number: 80
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: hello-hello-ingress
-  namespace: hello
-spec:
-  ingressClassName: nginx
-  rules:
-    - host: hello.hello
+    - host: app1.k8s-dev.hpc.uidaho.edu
       http:
         paths:
           - path: /
