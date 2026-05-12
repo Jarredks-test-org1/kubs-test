@@ -1,0 +1,21 @@
+---
+global:
+  domain: app0.cbradford1.nkn.uidaho.edu
+
+configs:
+  params:
+    server.insecure: true
+  cm:
+    exec.enabled: true
+    exec.shells: "bash,sh,powershell,cmd,zsh"
+    admin.enabled: "true"
+    kustomize.buildOptions: --enable-helm
+
+server:
+  ingress:
+    enabled: true
+    tls: false
+    ingressClassName: nginx
+    annotations:
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
