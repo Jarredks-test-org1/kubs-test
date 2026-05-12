@@ -1,0 +1,11 @@
+---
+controller:
+  service:
+    type: ClusterIP
+    externalIPs:
+      - 129.101.202.173
+  admissionWebhooks:
+    annotations:
+      argocd.argoproj.io/hook: PostSync
+  ingressClassResource:
+    default: true
